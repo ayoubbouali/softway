@@ -1,0 +1,243 @@
+.imputations {
+  caption-side: bottom;
+  border-collapse: collapse;
+  display: table;
+  width: 100%;
+
+  thead {
+    background-color: #F5F5F5;
+    height: 60px;
+    text-align: left;
+    border: 1px solid #E7E6E6;
+    border-bottom: none;
+  }
+
+  tbody {
+    border: 1px solid #E7E6E6;
+    border-bottom: none;
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+
+  .imputations-menu {
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding: 0;
+      margin: 0;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      line-height: 1;
+    }
+  }
+
+
+  &__day,
+  &__total {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+    width: 90px;
+    border-left: 1px solid #E7E6E6;
+    padding-left: 20px;
+
+    span {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #8C8C8C;
+    }
+  }
+
+  &__total {
+    width: 130px;
+  }
+
+  .imputations-footer {
+    border-top: 2px solid $primary;
+    font-size: 14px;
+    height: 60px;
+    text-align: center;
+    font-weight: 500;
+
+    .empty-day-text {
+      color:#FF0000;
+    }
+  }
+
+
+  &__line {
+    border-top: 1px solid #E7E6E6;
+    background-color: #fff;
+
+    .imputations__message {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 12px;
+      height: 12px;
+      background-color: $primary;
+      border-radius: 12px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all ease-in-out .3s;
+
+      &.add {
+        background-color: #000;
+        display: none;
+
+        &:after {
+          content: "+";
+          width: 12px;
+          height: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+      }
+    }
+
+    .td-day {
+      border-left: 1px solid #E7E6E6;
+      width: 90px;
+      height: 90px;
+      text-align: center;
+      position: relative;
+
+      &.disabled {
+        background-image: linear-gradient(120deg, #f4f4f4 4.55%, #ffffff 4.55%, #ffffff 50%, #f4f4f4 50%, #f4f4f4 54.55%, #ffffff 54.55%, #ffffff 100%);
+        background-size: 12.70px 22.00px;
+      }
+      &.day-empty {
+        background-color: #FBEEEE;
+      }
+      
+      &.disabled.day-empty {
+        background-image: linear-gradient(120deg, #ffffff 4.55%, #FBEEEE 4.55%, #FBEEEE 50%, #ffffff 50%, #ffffff 54.55%, #FBEEEE 54.55%, #FBEEEE 100%);
+      }
+
+
+      &:hover {
+        .add {
+          display: flex;
+        }
+      }
+    }
+
+    .td-total-day {
+      position: relative;
+      padding-left: 20px;
+      border-left: 1px solid #E7E6E6;
+    }
+    
+    .imputation-delete {
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      right: -13px;
+      width: 28px;
+      height: 28px;
+      background-color: #000;
+      border-radius: 26px;
+      color:#fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #E7E6E6;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .td-title {
+      padding-left: 20px;
+      font-size: 16px;
+
+      span {
+        font-size: 14px;
+        font-weight: 300;
+        display: block;
+      }
+    }
+
+
+    .td-case {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      select {
+        appearance: none;
+        width: 60px;
+        height: 45px;
+        border: 1px solid #E7E6E6;
+        background-color: #fff;
+        text-align: center;
+        font-size: 14px;
+        color: #000;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+}
+
+
+.imputations-header-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.imputations-switch {
+  display: flex;
+  align-items: center;
+  
+  p {
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  button {
+    margin: 0;
+    padding: 0;
+    appearance: none;
+  }
+}
+
+.imputations-alert {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}

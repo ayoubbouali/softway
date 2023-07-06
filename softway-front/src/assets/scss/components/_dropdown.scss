@@ -1,0 +1,48 @@
+@mixin ngx-popperjs-theme($background, $text, $max-width: 250px, $z-index: 999) {
+
+  div.ngxp__container {
+    background: $black;
+    color: $white;
+    border: 0;
+    max-width: $max-width;
+    box-shadow: none;
+    z-index: $z-index;
+    padding: 20px;
+
+    > .ngxp__arrow {
+      &:before {
+        background-color: $background;
+      }
+    }
+  }
+}
+
+@include ngx-popperjs-theme($black, white);
+
+.poppers-large {
+  div.ngxp__container {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+
+.dropdown-link {
+  display: block;
+  margin-bottom: 8px;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+  color:#fff;
+  text-decoration: none;
+  font-size: rem(16px);
+  white-space: nowrap;
+
+  &:hover {
+    color: $primary;
+  }
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

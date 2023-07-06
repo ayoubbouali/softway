@@ -1,0 +1,115 @@
+.btn {
+  font-size: rem(14px);
+  appearance: none;
+  border: none;
+  background-color: $black;
+  color: white;
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1.5;
+  user-select: none;
+  transition: all ease-in-out .3s;
+
+  &:hover {
+    background: lighten($black, 10%);
+  }
+
+  &:disabled {
+    background: grey;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-secondary {
+    background-color: $secondary;
+  }
+
+  &-sm {
+    height: 30px;
+    padding: 0 15px;
+  }
+  &-circle {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border-radius: 15px;
+  }
+
+  &.with-icon {
+    .icn {
+      padding-right: 5px;
+    }
+  }
+}
+
+.button-secondary {
+  border: 0;
+  @include rem(14px);
+  font-weight: 600;
+  background-color: $navGrey;
+}
+
+.btn-link {
+  background-color: transparent;
+  color:#000;
+  font-weight: 600;
+
+  &:hover {
+    background: transparent;
+    color:$primary;
+  }
+}
+
+.btn-icon {
+  appearance: none;
+  border: 1px solid $grey;
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-left: -1px;
+  line-height: 1;
+  @include flex-center;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: $secondary;
+
+    svg {
+      filter: invert(100%);
+    }
+  }
+
+  &.filtered {
+   &:after {
+     content:"";
+     position: absolute;
+     top:2px;
+     right: 2px;
+     width: 6px;
+     height: 6px;
+     background-color: red;
+     border-radius: 50%;
+   }
+  }
+}
+
+
+.circle {
+  height: 30px;
+  width: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

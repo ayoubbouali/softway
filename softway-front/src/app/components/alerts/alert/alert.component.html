@@ -1,0 +1,28 @@
+<div
+  class="alert"
+  [ngClass]="{
+    'opacity-0': hide,
+    'bg-warn': type === ALERT_TYPE.Warning,
+    'bg-error': type === ALERT_TYPE.Error
+  }"
+>
+  <div
+    class="alert__icon"
+    [ngClass]="{'error': type === ALERT_TYPE.Error, 'warning': type === ALERT_TYPE.Warning}"
+    [ngSwitch]="type">
+    <check-icn *ngSwitchCase="ALERT_TYPE.Success" color="black" height="10" width="12"></check-icn>
+    <error-icn *ngSwitchCase="ALERT_TYPE.Error" color="black"></error-icn>
+    <warning-icn *ngSwitchCase="ALERT_TYPE.Warning" color="black"></warning-icn>
+  </div>
+  <div class="alert__content">
+    <div
+      class="title line-break"
+      [ngClass]="{'error': type === ALERT_TYPE.Error, 'warning': type === ALERT_TYPE.Warning}">
+      {{ title }}
+    </div>
+    <div *ngIf="message !== undefined" class="message line-break">{{ message }}</div>
+  </div>
+  <button class="cursor-pointer" (click)="close()" [disabled]="hide"
+    ><close-icn class="d-flex" color="white" height="14" width="14"></close-icn></button
+  >
+</div>

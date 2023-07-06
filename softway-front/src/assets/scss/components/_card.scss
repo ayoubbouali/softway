@@ -1,0 +1,65 @@
+.card {
+    border: 1px solid $grey;
+    padding: 30px 30px 20px 30px;
+    background-color: $white;
+    position: relative;
+    height: 100%;
+
+    &__setting {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        opacity: .3;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+
+        .project-number {
+            font-size: rem(18px);
+            font-weight: 600;
+        }
+
+        .project-title {
+            font-size: rem(24px);
+            font-weight: 300;
+        }
+    }
+
+    &__infos {
+        margin-top: 20px;
+
+        &::before {
+            content: "";
+            width: 30px;
+            display: block;
+            position: relative;
+            top: -20px;
+            border-top: 2px solid $primary;
+        }
+    }
+
+    .tag {
+        background-color: $bg-color;
+        padding: 5px 10px;
+        width: max-content;
+        border-radius: 10px;
+        font-size: rem(12px);
+        margin-top: 20px;
+
+        &.wallet {
+            background-color: $primary;
+            color: $white;
+        }
+
+        &.wip {
+            background-color: $blue;
+            color: $white;
+        }
+
+        &.sent {
+            background-color: $pink;
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="small-container" *ngIf="patient?.pathologies?.length; else patientClean">
+    <h4><span class="name-color">{{patient?.nom}}</span> must be redirected to the following units :</h4>
+    <div *ngFor="let pathologie of patient?.pathologies">
+      <h4 class="pathologie-color">{{pathologie}}</h4>
+    </div>
+
+    <hr class="dashed">
+
+    <div>
+      <h4>Here is the history of all diagnoses for this patient :</h4>
+      <table class="patient-history">
+        <thead>
+        <tr>
+          <th>Health Index</th>
+          <th>Date Of Diagnose</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let history of patient?.listOfPatientDiagnoseHistory">
+          <td>{{ history.healthIndex }}</td>
+          <td>{{ history.dateOfDiagnose | date:'dd/MM/yyyy HH:mm' }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <ng-template #patientClean>
+    <div class="small-container">
+      <h4><span class="name-color">{{patient?.nom}}</span> is in good health !</h4>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,11 @@
+.projet-page {
+    .action-item {
+        width: 36px;
+        height: 36px;
+        color:#fff;
+        border-radius: 50%;
+        border: 3px solid #FAFAFA;
+        @include flex-center;
+        cursor: pointer;
+      }
+}

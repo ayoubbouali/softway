@@ -1,0 +1,76 @@
+.machine-list {
+  background-color: #fff;
+  border: 1px solid #e7e6e6;
+
+  &__header {
+    height: 120px;
+    background-color: #F8F8FA;
+    padding: 30px;
+    position: relative;
+  }
+  &__content {
+    padding: 0;
+    margin: 0;
+    max-height: calc(5 * 90px);
+    overflow: auto;
+
+    li {
+      width: 100%;
+      height: 90px;
+      background-color: #fff;
+      @include flex-align-between;
+      padding: 0 20px 0 20px;
+      position: relative;
+      cursor: pointer;
+      border-top: 1px solid #E7E6E6;
+
+      &:nth-child(even) {
+        background-color: #F8F8FA;
+      }
+
+      &:hover, &:focus, &:active, &.active {
+        background-color: $hover-list;
+      }
+
+      small {
+        display: block;
+        font-size: rem(12px);
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 3px;
+      }
+    }
+  }
+  &__action {
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    color:#fff;
+    @include flex-center;
+    border-radius: 50%;
+    transition: all ease-in-out .2s;
+    transform: translateY(-50%);
+
+    &:hover, &:focus, &:active {
+      background-color: $primary;
+    }
+  }
+}
+
+.add-machine-btn {
+  position: absolute;
+  top:20px;
+  right: 20px;
+  font-size: rem(12px);
+  color: #000000;
+  text-align: right;
+  @include flex-align;
+
+  span {
+    margin-right: 5px;
+  }
+}

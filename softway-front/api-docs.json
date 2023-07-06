@@ -1,0 +1,143 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/diagnose": {
+      "post": {
+        "tags": [
+          "patient-controller"
+        ],
+        "operationId": "createPatient",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientVO"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diagnose/{id}": {
+      "get": {
+        "tags": [
+          "patient-controller"
+        ],
+        "operationId": "getPatientById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PatientVO": {
+        "type": "object",
+        "properties": {
+          "idPatient": {
+            "type": "string"
+          },
+          "healthIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string"
+          },
+          "nom": {
+            "type": "string"
+          }
+        }
+      },
+      "PatientDTO": {
+        "type": "object",
+        "properties": {
+          "idPatient": {
+            "type": "string"
+          },
+          "healthIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string"
+          },
+          "nom": {
+            "type": "string"
+          },
+          "pathologies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "listOfPatientDiagnoseHistory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PatientDiagnoseHistoryDTO"
+            }
+          }
+        }
+      },
+      "PatientDiagnoseHistoryDTO": {
+        "type": "object",
+        "properties": {
+          "idPatientHistory": {
+            "type": "string"
+          },
+          "dateOfDiagnose": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "healthIndex": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    }
+  }
+}

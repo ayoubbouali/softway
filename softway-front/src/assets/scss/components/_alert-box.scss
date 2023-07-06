@@ -1,0 +1,47 @@
+.alert-box, .commentaire-box {
+    border-radius: 6px;
+    padding: 30px 60px 30px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &__append {
+        color:$alert;
+        padding-left: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        span {
+            width: 28px;
+            height: 28px;
+            @include flex-center;
+            background-color:$alert;
+            border-radius: 28px;
+            position: absolute;
+            left: -14px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__body {
+        padding-left: 30px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+    &__actions {
+        position: absolute;
+        right: -17px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.alert-box {
+  background: rgba(255, 134, 134, 0.10);
+  border: 1px solid rgba(239, 8, 8, 0.15);
+}
+.commentaire-box {
+  background: #F5F5F5;
+  border: 1px solid #e7e6e6;
+}

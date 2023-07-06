@@ -1,0 +1,11 @@
+<div class="alerts">
+  <app-alert
+    *ngFor="let alert of alerts"
+    [title]="alert.title"
+    [message]="alert.message"
+    [type]="alert.type"
+    [hide]="alert.hide"
+    (closeEvent)="closeAlert(alert)"
+  >
+  </app-alert>
+</div>

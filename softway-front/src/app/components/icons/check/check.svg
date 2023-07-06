@@ -1,0 +1,9 @@
+<svg [attr.width]="width+'px'" [attr.height]="height+'px'" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="softway" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LISTE-USERS-DropDown-select" transform="translate(-993.000000, -252.000000)" [attr.fill]="color" fill-rule="nonzero">
+            <g id="Group-14" transform="translate(829.000000, 201.000000)">
+                <path d="M174.280712,51.280712 L167.987712,57.573712 L165.694712,55.280712 C165.302333,54.9017398 164.678627,54.9071596 164.292893,55.2928934 C163.90716,55.6786272 163.90174,56.3023331 164.280712,56.694712 L167.280712,59.694712 C167.671212,60.085094 168.304212,60.085094 168.694712,59.694712 L175.694712,52.694712 C176.073684,52.3023331 176.068264,51.6786272 175.682531,51.2928934 C175.296797,50.9071596 174.673091,50.9017398 174.280712,51.280712 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,83 @@
+/* Spécifier les règles générales du site */
+* {
+  outline: none;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+
+html, body {
+  background-color: $bg-color;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $html-font-size;
+  font-family: $font-base;
+  padding: 0;
+  margin: 0;
+  scrollbar-color: #BEBEBE transparent;
+  scrollbar-width: thin;
+  appearance: none;
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: $grey;
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #BEBEBE;
+  }
+}
+
+b, strong {
+  font-weight: 500 !important;
+}
+
+button {
+  appearance: none;
+  cursor: pointer;
+}
+
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-base;
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+
+.title-section {
+  font-size: rem(24px);
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 50px;
+  line-height: 1;
+
+  span {
+    background-color: $bg-color;
+    position: relative;
+    z-index: 1;
+    padding-right: 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $primary;
+  }
+}

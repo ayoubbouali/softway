@@ -1,0 +1,357 @@
+.form-control {
+  display: block;
+  width: 100%;
+  height: $form-control-input-height;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $black;
+  background-color: $white;
+  background-clip: padding-box;
+  border: 1px solid $input-border-color;
+  font-family: $font-base;
+  appearance: none;
+  transition: all .3s ease-in-out;
+  padding: 0 20px;
+
+  &:disabled {
+    color: #919191;
+    background-color: #F2F2F2;
+    border-color: $grey;
+
+    &:hover {
+      border-color: $grey;
+    }
+  }
+
+  &:invalid {
+    color: $alert;
+    background-color: rgba($alert, .05);
+    border-color: rgba($alert, .3);
+
+    &:hover {
+      border-color: rgba($alert, .3);
+    }
+  }
+
+  &:hover {
+    border-color: darken($input-border-color, 30%);
+  }
+
+  &::placeholder {
+    color: rgba($body-color, .5);
+    opacity: 1;
+  }
+
+  &-sm {
+    height: 35px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  &-md {
+    height: 45px;
+    padding: 0 12px;
+    padding: 0 20px;
+  }
+
+  &.select {
+    background-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI1cHgiIHZpZXdCb3g9IjAgMCAxMCA1IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPlJlY3RhbmdsZTwvdGl0bGU+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cG9seWdvbiBpZD0iUmVjdGFuZ2xlIiBmaWxsPSIjOTk5OTk5IiBwb2ludHM9IjAgMCAxMCAwIDUgNSI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4=');
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 10px 5px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  &::file-selector-button {
+    height: 60px;
+    padding: 0 15px;
+    font-size: 1rem;
+    margin-left: -20px;
+    color: #fff;
+    background-color: $black;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    -webkit-appearance: button;
+    display: inline-block;
+    margin-inline-end: 1rem;
+    cursor: pointer;
+  }
+}
+
+.form-group {
+  margin-bottom: 30px;
+  position: relative;
+
+  &.glued {
+    .form-control, .input-group-text {
+      margin-top: -1px;
+    }
+  }
+
+  &.error {
+    .feedback {
+      display: block;
+    }
+
+    .form-control {
+      color: $alert;
+      background-color: rgba($alert, .05);
+      border-color: rgba($alert, .3);
+
+      &:hover {
+        border-color: rgba($alert, .3);
+      }
+    }
+
+    .input-group-text {
+      color: $alert;
+      background-color: rgba($alert, .05);
+      border-color: rgba($alert, .3);
+    }
+
+
+  }
+
+  label {
+    font-size: rem(12px);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    color:$black;
+  }
+
+  .feedback {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: rem(12px);
+    text-transform: uppercase;
+    font-weight: 500;
+    display: none;
+    color: $alert;
+  }
+}
+
+.tiny-label {
+  text-transform: uppercase;
+  font-size: rem(12px);
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.form-check {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5em;
+
+  .form-check-input {
+    width: 1rem;
+    height: 1rem;
+    margin-top: .15rem;
+    vertical-align: top;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid $input-border-color;
+    appearance: none;
+    float: left;
+    margin-left: -1.5rem;
+
+    &:disabled ~ .form-check-label, .form-check-input[disabled] ~ .form-check-label {
+      cursor: default;
+      opacity: .5;
+    }
+
+    &:checked {
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    &:checked[type="checkbox"] {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    }
+
+    &:checked[type="radio"] {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+    }
+
+    &[type="radio"] {
+      border-radius: 50%;
+    }
+  }
+
+  .form-check-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 3px;
+  }
+}
+
+input[type=range] {
+  appearance: none;
+  width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: .5rem;
+  cursor: pointer;
+  background: $input-border-color;
+  border-radius: 1rem;
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: $primary;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: .5rem;
+  cursor: pointer;
+  background: $input-border-color;
+  border-radius: 25px;
+  border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: $primary;
+  border: none;
+  cursor: pointer;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  transition: all .3s ease-in-out;
+
+  .input-group-download-link {
+    background-color: #F8F8FA;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+    transition: all .35s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e7e6e6;
+    margin-right: -1px;
+
+    &:hover, &:focus {
+      background-color: $primary;
+      border-color: darken($input-border-color, 30%);
+    }
+  }
+
+  .input-group-reset {
+    background-color: #fff;
+    width: 60px;
+    height: 58px;
+    cursor: pointer;
+    transition: all .35s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-control {
+    border-right: none;
+    padding-right: 0;
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+  }
+
+  &:hover {
+    .input-group-text, .form-control, .input-group-download-link  {
+      border-color: darken($input-border-color, 30%);
+    }
+  }
+
+  & > :not(:last-child):not(.form-control) {
+    border-right-color: $white;
+
+    & + .form-control {
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+
+  & > :not(:first-child):not(.form-control) {
+    border-left-color: $white;
+    margin-left: -1px;
+
+    .form-control {
+      border-right: none;
+      padding-right: 0;
+
+    }
+  }
+
+  .input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: $form-control-input-height;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $black;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $white;
+    border: 1px solid $input-border-color;
+    transition: all .3s ease-in-out;
+  }
+
+  &-md {
+    .form-control {
+      height: 45px;
+      padding: 0 12px;
+      padding: 0 20px;
+    }
+    .input-group-text {
+      height: 45px;
+    }
+  }
+}
+
+
+.dark {
+  .form-control {
+    background-color: #2C2C2C;
+    color:#fff;
+    border-color: #555555;
+
+    &::placeholder {
+      color: rgba($white, .5);
+      opacity: 1;
+    }
+
+    &.select {
+      background-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI1cHgiIHZpZXdCb3g9IjAgMCAxMCA1IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGcgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI2ZmZmZmZiIgcG9pbnRzPSIwIDAgMTAgMCA1IDUiPjwvcG9seWdvbj4KICAgIDwvZz4KPC9zdmc+');
+    }
+  }
+}

@@ -1,0 +1,80 @@
+// ATTENTION !!!! calculateRem & font-size déprécier //
+// Utiliser rem EXEMPLE : rem(14px) pas de @include //
+@use "sass:math";
+
+@function calculateRem($size) {
+  $remSize: math.div($size, 16px);
+  @return $remSize * 1rem;
+}
+
+@mixin rem($size) {
+  font-size: calculateRem($size);
+}
+
+@function stripUnit($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
+}
+
+
+//LAYOUTS
+@mixin flex-align-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-align {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin flex-align-bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+
+@mixin scrollbar {
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $black;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($black, 10%);
+  }
+}

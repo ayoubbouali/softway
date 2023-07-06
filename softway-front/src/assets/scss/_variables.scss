@@ -1,0 +1,133 @@
+$white: #fff !default;
+$black: #121212 !default;
+$primary: #3DCD58 !default;
+$secondary: #121212;
+$pink: #CD3D98;
+$blue: #3D91CD;
+$grey: #E7E6E6;
+$navGrey: #F5F5F5;
+$bg-color: #FAFAFA;
+$warning: #CD973D;
+$alert: #EF0808;
+$success: #3BB381;
+$danger: #CD433D;
+$dark: #2C2C2C;
+$border-radius: 6px;
+$hover-list : #EBFAEE;
+
+$theme-colors: (
+  "primary" $primary,
+  "secondary" $secondary,
+  "blue" $blue,
+  "grey" $grey,
+  "alert" $alert,
+  "warning" $warning,
+  "success" $success,
+  "black" $black,
+  "pink" $pink,
+  "white" #fff,
+) !default;
+
+$badge-colors: (
+  "pending" $blue,
+  "alert" $alert,
+  "warning" $warning,
+  "success" $success,
+  "primary" $primary,
+  "secondary" $secondary,
+  "white" $white,
+  "pink" $pink,
+) !default;
+
+
+$font-base: "Rubik", sans-serif, !default;
+$html-font-size: 16px;
+$font-family: "Rubik", sans-serif, !default;
+$body-color: $black !default;
+$link-color: $black !default;
+
+
+$spacers: (0, 5, 8, 10, 12, 15, 16, 20, 24, 25, 30, 35, 40, 45, 50, 60, 80, 100, 150);
+$font-sizes: (10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 40);
+$font-weight: (300, 500, 600, 700);
+$width-spacers: (25, 50, 75, 80, 100);
+$section-bottom: 150px;
+$gutter-space: 30px;
+$container-width : 1200px;
+
+//FORM CONTROLS
+$form-control-input-height: 60px !default;
+$form-control-input-height-small: 40px !default;
+$input-border-color: $grey;
+
+
+
+//AG GRID
+.ag-theme-softway {
+  --ag-alpine-active-color: #EBF9ED;
+  --ag-selected-row-background-color: #EBF9ED;
+  --ag-row-hover-color: #EBF9ED;
+  --ag-column-hover-color: rgba(33, 150, 243, 0.1);
+  --ag-input-focus-border-color: #555;
+  --ag-range-selection-background-color: rgba(33, 150, 243, 0.2);
+  --ag-range-selection-background-color-2: rgba(33, 150, 243, 0.36);
+  --ag-range-selection-background-color-3: rgba(33, 150, 243, 0.49);
+  --ag-range-selection-background-color-4: rgba(33, 150, 243, 0.59);
+  --ag-background-color: #fff;
+  --ag-foreground-color: $black;
+  --ag-border-color: $grey;
+  --ag-secondary-border-color: #dde2eb;
+  --ag-header-background-color: $bg-color;
+  --ag-header-background-color-white: #fff;
+  --ag-odd-row-background-color: #F5F5F5;
+  --ag-control-panel-background-color: $grey;
+  --ag-subheader-background-color: #fff;
+  --ag-invalid-color: #e02525;
+  --ag-checkbox-unchecked-color: #999;
+  --ag-checkbox-background-color: var(--ag-background-color);
+  --ag-checkbox-checked-color: $primary;
+  --ag-range-selection-border-color: var(--ag-alpine-active-color);
+  --ag-secondary-foreground-color: var(--ag-foreground-color);
+  --ag-input-border-color: #555;
+  --ag-input-border-color-invalid: var(--ag-invalid-color);
+  --ag-input-disabled-background-color: rgba(186, 191, 199, 0.15);
+  --ag-borders: solid 1px;
+  --ag-border-radius: 0;
+  --ag-borders-side-button: none;
+  --ag-side-button-selected-background-color: transparent;
+  --ag-header-column-resize-handle-display: block;
+  --ag-header-column-resize-handle-width: 1px;
+  --ag-header-column-resize-handle-height: 30%;
+  --ag-grid-size: 6px;
+  --ag-icon-size: 12px;
+  --ag-row-height: 40px;
+  --ag-header-height: 40px;
+  --ag-list-item-height: calc(var(--ag-grid-size) * 1);
+  --ag-column-select-indent-size: var(--ag-icon-size);
+  --ag-cell-horizontal-padding: calc(var(--ag-grid-size) * 3);
+  --ag-cell-widget-spacing: calc(var(--ag-grid-size) * 2);
+  --ag-widget-container-vertical-padding: 15px;
+  --ag-widget-container-horizontal-padding: 15px;
+  --ag-widget-vertical-spacing: 10px;
+  --ag-toggle-button-height: 18px;
+  --ag-toggle-button-width: 28px;
+  --ag-font-family: $font-base;
+  --ag-font-size: 14px;
+  --ag-font-size-sm: 14px;
+  --ag-icon-font-family: agGridAlpine;
+  --ag-selected-tab-underline-color: var(--ag-alpine-active-color);
+  --ag-selected-tab-underline-width: 2px;
+  --ag-selected-tab-underline-transition-speed: 0.3s;
+  --ag-tab-min-width: 240px;
+  --ag-popup-shadow: var(--ag-card-shadow);
+  --ag-side-bar-panel-width: 300px;
+  --ag-secondary-border-color: rgba(88, 86, 82, 0.5);
+  --ag-modal-overlay-background-color: rgba(24, 29, 31, 0.66);
+  --ag-input-disabled-background-color: #282c2f;
+  --ag-input-focus-box-shadow: non;
+  --ag-card-shadow: 0 0 0 0 $black;
+  --ag-disabled-foreground-color: rgba(255, 255, 255, 0.5);
+  --ag-chip-background-color: rgba(255, 255, 255, 0.07);
+  --ag-input-disabled-border-color: rgba(104, 104, 110, 0.3);
+  --ag-input-disabled-background-color: rgba(104, 104, 110, 0.07);
+}

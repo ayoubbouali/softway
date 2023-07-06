@@ -1,0 +1,50 @@
+.project-main-informations {
+  position: relative;
+
+  &__actions {
+    position: absolute;
+    right: -17px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+    &__line {
+        border: 1px solid $grey;
+        border-right: none;
+        border-bottom: none;
+
+      .form-group {
+        margin-bottom: 0;
+      }
+
+      .form-group.error .feedback {
+        display: none;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $grey;
+      }
+    }
+
+    .well {
+        height: 60px;
+        padding: 0 30px 0 30px;
+        border-right: 1px solid $grey !important;
+
+        span {
+            margin-right: 30px;
+            font-weight: 300;
+            white-space: nowrap;
+        }
+    }
+
+    .form-control {
+        height: 45px;
+    }
+}
+
+.list-group.input-fix {
+  .list-group-item > span, .list-group-item .input-group {
+    width: 50%;
+  }
+}
