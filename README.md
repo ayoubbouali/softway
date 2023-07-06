@@ -8,10 +8,10 @@ The tools that you'll need for developping on this project are :
 
 * **Git** : https://git-scm.com/
 * **Jdk 17** (we won't be doing JEE)
-* **Node.js** (requires version is 12.14 or higher) : https://nodejs.org/en/
+* **Node.js** (requires version is 18.16.1 or higher) : https://nodejs.org/en/
 * Choose one package manager among :
     * **Yarn** (use the latest version of Yarn) : https://yarnpkg.com/en/
-    * **Npm** (any version of npm that is greater than or equal to 6.14.8) : https://www.npmjs.com/
+    * **Npm** (any version of npm that is greater than or equal to 9.5.1) : https://www.npmjs.com/
 * **Maven** : https://maven.apache.org/
 * Your favorite IDE. If you don't have any idea :
     * **Intellij** : https://www.jetbrains.com/idea/
