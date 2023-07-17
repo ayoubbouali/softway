@@ -41,7 +41,7 @@ class PatientControllerTest extends AbstractSoftwayTest {
         mockMvc.perform(post("/diagnose").contentType(MediaType.APPLICATION_JSON)
                         .content(mapper.writeValueAsBytes(newPatient)))
                 .andDo(print())
-                .andExpect(status().isOk());
+                .andExpect(status().isCreated());
     }
 
 }

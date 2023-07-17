@@ -37,6 +37,6 @@ export interface PatientControllerServiceInterface {
      * 
      * @param id 
      */
-    getPatientById(id: string, extraHttpRequestParams?: any): Observable<PatientDTO>;
+    getPatientById(id: string, extraHttpRequestParams?: any): Observable<object>;
 
 }
